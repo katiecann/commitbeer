@@ -1,1 +1,14 @@
-<p>This is the results view.</p>
+<div class="container">
+	<h2>Search Results</h2>
+</div>
+
+<div class="panel panel-default" ng-repeat="businesses in businessesFound.list">
+  <div class="panel-heading">
+    <h3 class="panel-title">{{businesses.name}}</h3>
+  </div>
+  <div class="panel-body">
+    {{business.location.display_address}}
+    <img src="{{businesses.image_url}}" class="img-circle">
+  </div>
+</div>
+
