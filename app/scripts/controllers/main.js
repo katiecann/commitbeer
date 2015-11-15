@@ -9,12 +9,11 @@
  */
 angular.module('commitbeerApp')
    .controller('MainCtrl', function ($scope, yelpapi) {
-     $scope.businessesFound = yelpapi.find();
+     $scope.location = "";
 
-     $scope.findBusinesses = function(){
+     $scope.findBusinesses = function() {
          $scope.businessesFound = yelpapi.find({
              query: $scope.location
          });
-         $scope.searchQuery = $scope.location;
      };
    });

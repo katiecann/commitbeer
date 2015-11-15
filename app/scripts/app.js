@@ -33,7 +33,7 @@ angular
       })
       .when('/results', {
         templateUrl: 'views/results.html',
-        controller: 'MainCtrl',
+        controller: 'ResultsCtrl',
         controllerAs: 'results'
       })
       .otherwise({
