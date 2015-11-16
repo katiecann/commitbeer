@@ -9,7 +9,7 @@
  */
 
 angular.module('commitbeerApp')
-  .factory('yelpApi', function ($resource) {
+  .factory('yelpapi', function ($resource) {
     // Service logic
     // ...
 
