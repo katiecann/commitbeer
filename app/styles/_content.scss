@@ -6,15 +6,34 @@
 
 .jumbotron {
 	background: url(../images/bar.jpg) no-repeat center center fixed;
-	height: 400px;
+	height: 570px;
+
+	.container {
+		padding-top: 100px;
+	}
 }
 
-.navbar {
-	margin: 0;
+.listing {
+	width: 50%;
+	display: inline-block;
+	margin: 20px;
+
+	.panel-body {
+		padding: 30px;
+	}
+
+	img {
+		float: right;
+		width: 90px;
+		float: right;
+	}
+	.contact {
+		float: left;
+	}
 }
 
-.img-circle {
-	height: 80px;
-	width: 80px;
-	display: block;
+.footer {
+	button {
+		border-radius: 5px;
+	}
 }

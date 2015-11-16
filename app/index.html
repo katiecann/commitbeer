@@ -11,6 +11,7 @@
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
+    
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
   </head>
@@ -20,29 +21,7 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div class="header">
-      <div class="navbar navbar-default" role="navigation">
-        <div class="container">
-          <div class="navbar-header">
 
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-
-            <a class="navbar-brand" href="#/">commitbeer</a>
-          </div>
-
-          <div class="collapse navbar-collapse" id="js-navbar-collapse">
-
-            <ul class="nav navbar-nav">
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
 
     <div>
     <div ng-view=""></div>
@@ -50,7 +29,7 @@
 
     <div class="footer">
       <div class="container">
-        <button>Submit Spot</button>
+        <button class="submit-spot">Submit Spot</button>
       </div>
     </div>
 
@@ -95,6 +74,13 @@
     <!-- oauth-signature for Yelp Api signature -->
     <script src="/bower_components/oauth-signature/dist/oauth-signature.js"></script>
     <!-- end oath-signature -->
+
+    <!-- Google Maps Dependencies -->
+    <script src='/bower_components/angular-google-maps/dist/lodash[.min].js'></script>
+    <script src='/bower_components/angular-google-maps/dist/angular[.min].js'></script>
+    <script src='/bower_components/angular-google-maps/dist/angular-simple-logger/angular-simple-logger[.min].js'></script>
+    <script src='/pbower_components/angular-google-maps/angular-google-maps[.min].js'></script>
+    <!-- End Google Maps Dependencies -->
     
 </body>
 </html>
