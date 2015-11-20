@@ -8,12 +8,9 @@
  * Controller of the commitbeerApp
  */
 angular.module('commitbeerApp')
-  .controller('ResultsCtrl', function ($scope, uiGmapGoogleMapApi) {
-  	$scope.markers = [];
-  	
-  	uiGmapGoogleMapApi.then(function() {
+  .controller('ResultsCtrl', function ($scope) {
 
-    });
+
 });
 
 /**
@@ -26,5 +23,13 @@ TODO:  Where does this go? ->
         libraries: 'weather,geometry,visualization'
     });
 })
+
+  .controller('ResultsCtrl', function ($scope, uiGmapGoogleMapApi) {
+  	$scope.markers = [];
+  	
+  	uiGmapGoogleMapApi.then(function() {
+
+    });
+});
 
 */
