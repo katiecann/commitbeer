@@ -21,37 +21,37 @@
       <h1>Search Results</h1>
     </div>
 
-      <div class="panel panel-default" ng-repeat="businesses in businessesFound.list">
-        <div class="panel-heading">
-          <h3 class="panel-title">{{businesses.name}}</h3>
-        </div>
-        <div class="panel-body">
-          {{business.location.display_address}}
-          <img src="{{businesses.image_url}}" class="img-circle">
-        </div>
-      </div>
-
-
-
-
-      <div class="panel panel-default listing">
-        <div class="panel-heading">
-          <h3 class="panel-title">XYZ Business</h3>
-        </div>
-          <div class="row">
-          <div class="panel-body">
-              <div class="contact">
-                <p>
-                  1234 Main St
-                  <br>
-                  Your Town, USA
-                  <br>
-                  123-456-7899
-              </p>
+      <div class="row">
+        <div class="col-sm-6 col-md-3" ng-repeat="businesses in businessesFound.list">
+          <div class="thumbnail">
+            <img src="{{businesses.image_url}}">
+            <div class="caption">
+              <h3>{{businesses.name}}</h3>
+              <p>{{businesses.location.display_address}}</p>
+              <p><a href="{{businesses.url}}" class="btn btn-default" role="button">Website</a></p>
             </div>
-              <div>
-                <img src="../images/beerglass.jpg" class="img-circle">
-              </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-md-3">
+          <div class="thumbnail">
+            <img src="/images/beerglass.jpg">
+            <div class="caption">
+              <h3>ABC Business</h3>
+              <p>123 Main St</p>
+              <p><a href="#" class="btn btn-default" role="button">Website</a></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-md-3">
+          <div class="thumbnail">
+            <img src="images/beerglass.jpg">
+            <div class="caption">
+              <h3>XYZ Business</h3>
+              <p>456 Main St</p>
+              <p><a href="#" class="btn btn-default" role="button">Website</a></p>
+            </div>
           </div>
         </div>
       </div>
