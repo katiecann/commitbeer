@@ -8,28 +8,10 @@
  * Controller of the commitbeerApp
  */
 angular.module('commitbeerApp')
-  .controller('ResultsCtrl', function ($scope) {
-
-
-});
-
-/**
-TODO:  Where does this go? ->
-
-.config(function(uiGmapGoogleMapApiProvider) {
-    uiGmapGoogleMapApiProvider.configure({
-        //    key: 'your api key',
-        v: '3.20', //defaults to latest 3.X anyhow
-        libraries: 'weather,geometry,visualization'
-    });
-})
-
-  .controller('ResultsCtrl', function ($scope, uiGmapGoogleMapApi) {
-  	$scope.markers = [];
-  	
-  	uiGmapGoogleMapApi.then(function() {
-
-    });
-});
-
-*/
+  .controller('ResultsCtrl', function () {
+    this.awesomeThings = [
+      'HTML5 Boilerplate',
+      'AngularJS',
+      'Karma'
+    ];
+  });

@@ -1,20 +1,21 @@
-#search-bar {
+.content {
+	padding-left: 40px;
+	padding-right: 40px;
+}
 
+#search-bar {
 	padding-left: 10%;
 	padding-right: 10%;
 }
 
 .jumbotron {
 	background: url(../images/bar.jpg) no-repeat center center fixed;
-	height: 570px;
-
-	.container {
-		padding-top: 100px;
-	}
+	height: 600px;
+	padding-top: 150px;
 }
 
 .listing {
-	width: 50%;
+	width: 40%;
 	display: inline-block;
 	margin: 20px;
 
@@ -35,5 +36,7 @@
 .footer {
 	button {
 		border-radius: 5px;
+		position: relative;
+		left: 100%;
 	}
 }
