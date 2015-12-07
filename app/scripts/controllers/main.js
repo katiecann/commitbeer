@@ -12,7 +12,8 @@ angular.module('commitbeerApp')
      $scope.location = "";
 
      $scope.findBusinesses = function() {
-         $scope.businessesFound = yelpapi.find({
+     	console.log(yelpapi);
+         $scope.businessesFound = yelpapi.retrieveYelp({
              query: $scope.location
          });
      };

@@ -40,6 +40,7 @@
           }; // end params
           var consumerSecret =        '5fwBbTCHfjZJLrUGPKN95_qRBIE'; //Consumer Secret
           var tokenSecret =           'nmutDCrW-wo60B1bx7pYq0S8bHg'; //Token Secret
+          var oauthSignature =        '';
           var signature = 
             oauthSignature.generate(
               method, 
@@ -50,7 +51,7 @@
               { encodeSignature: false }
             ); 
             // end signature
-          params['oauth_signature'] = signature;
+          params.oauth_signature = signature;
           $http.jsonp(url, { params : params })
             .success(callback);
         }; // end retrieveYelp

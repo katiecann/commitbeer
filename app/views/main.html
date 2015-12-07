@@ -20,7 +20,7 @@
     <div class="page-header">
       <h1>Search Results</h1>
     </div>
-
+<p ng-if="businessesFound">{{businessesFound}}</p>
       <div class="row">
         <div class="col-sm-6 col-md-3" ng-repeat="businesses in businessesFound.list">
           <div class="thumbnail">
