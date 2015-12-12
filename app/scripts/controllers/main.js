@@ -8,13 +8,13 @@
  * Controller of the commitbeerApp
  */
 angular.module('commitbeerApp')
-   .controller('MainCtrl', function ($scope, yelpapi) {
-     $scope.location = "";
+.controller('MainCtrl', function ($scope, yelpapi) {
+  $scope.city = "";
 
-     $scope.findBusinesses = function() {
-     	console.log(yelpapi);
-         $scope.businessesFound = yelpapi.retrieveYelp({
-             query: $scope.location
-         });
-     };
-   });
+  $scope.findLocations = function() {
+      $scope.locationsFound = yelpapi.query({
+          city: $scope.city
+      });
+  };
+});
+

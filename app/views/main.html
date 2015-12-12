@@ -7,9 +7,9 @@
       </p>
       <div class="col-lg-12">
         <div class="input-group input-group-lg" id="search-bar">
-          <input type="text" class="form-control" placeholder="Location..." ng-model="location">
+          <input type="text" class="form-control" placeholder="City..." ng-model="city">
           <span class="input-group-btn">
-            <button class="btn btn-lg btn-primary" id="search-button" role="button" ng-click="findBusinesses()" onClick="document.getElementById('search-results').scrollIntoView();">Get Beer!</button>
+            <button class="btn btn-lg btn-primary" id="search-button" role="button" ng-click="findLocations()" onClick="document.getElementById('search-results').scrollIntoView();">Get Beer!</button>
           </span>
         </div>
       </div>
@@ -20,15 +20,14 @@
     <div class="page-header">
       <h1>Search Results</h1>
     </div>
-<p ng-if="businessesFound">{{businessesFound}}</p>
+<p ng-if="locationsFound">{{locationsFound}}</p>
       <div class="row">
-        <div class="col-sm-6 col-md-3" ng-repeat="businesses in businessesFound.list">
+        <div class="col-sm-6 col-md-3" ng-repeat="locations in locationsFound.list">
           <div class="thumbnail">
-            <img src="{{businesses.image_url}}">
             <div class="caption">
-              <h3>{{businesses.name}}</h3>
-              <p>{{businesses.location.display_address}}</p>
-              <p><a href="{{businesses.url}}" class="btn btn-default" role="button">Website</a></p>
+              <h3>{{bmp_locations.location.name}}</h3>
+              <p>{{bmp_locations.location.street}}</p>
+              <p>{{bmp_locations.location.city}}, {{bmp_locations.location.state}}</p>
             </div>
           </div>
         </div>
@@ -57,7 +56,7 @@
       </div>
 
 
-    <p ng-if="businessesFound">{{businessesFound}}</p>
+    <p ng-if="locationsFound">{{locationsFound}}</p>
 
     </div>
   </div>

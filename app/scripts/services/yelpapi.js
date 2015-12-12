@@ -1,3 +1,4 @@
+'use strict';
 
 /**
  * @ngdoc service
@@ -7,6 +8,32 @@
  * Factory in the commitbeerApp.
  */
 
+angular.module('commitbeerApp')
+  .factory('yelpapi', function ($resource) {
+    return $resource('http://beermapping.com/webservice/loccity/47249e5e63a967c13caaa2b23f409054/:city', {}, {
+      query: {
+        method:'GET',
+        params:{
+            city: null
+        },
+        isArray:false
+      }
+    });
+  });
+
+
+
+/**
+ * @ngdoc service
+ * @name commitbeerApp.yelpApi
+ * @description
+ * # yelpApi
+ * Factory in the commitbeerApp.
+ */
+
+
+//  Attempt at Yelp API Call, saving for future attempts
+/**
  (function () {
 
   'use strict';
@@ -40,7 +67,6 @@
           }; // end params
           var consumerSecret =        '5fwBbTCHfjZJLrUGPKN95_qRBIE'; //Consumer Secret
           var tokenSecret =           'nmutDCrW-wo60B1bx7pYq0S8bHg'; //Token Secret
-          var oauthSignature =        '';
           var signature = 
             oauthSignature.generate(
               method, 
@@ -65,44 +91,4 @@
     ]); // end factory
 
  }()); // end iife
-
-
-/**
-angular.module('commitbeerApp')
-  .factory('yelpapi', function ($resource) {
-    // Service logic
-    // ...
-    var oauth_consumer_key = 'nTnuQt3-And40RQRqw9bow';
-    var oauth_token = 'rDntJReWCt89Bpn6Z5vZCZgQ4MMJjcVF';
-    var oauth_nonce = '293647061';
-    var oauth_timestamp = '1448258587';
-    var oauth_signature_method = 'HMAC-SHA1';
-    var oauth_version = '1.0';
-    var consumerSecret = '5fwBbTCHfjZJLrUGPKN95_qRBIE';
-    var tokenSecret = 'nmutDCrW-wo60B1bx7pYq0S8bHg';
-    var url = 'https://api.yelp.com/v2/search/?';
-    var method = 'GET';
-    var oauthSignature;
-    var params;
-    // Public API here
-    return $resource('https://api.yelp.com/v2/search/?term=wifi&location=:location&limit=20&radius_filter=5000&category_filter=bars,breweries,beer_and_wine&oauth_consumer_key=:oauth_consumer_key&', {}, {
-      find: {
-        method: method,
-        url: url,
-        params:{
-            location: null,
-            oauth_consumer_key: oauth_consumer_key,
-            oauth_token: oauth_token,
-            oauth_nonce: oauth_nonce,
-            oauth_timestamp: oauth_timestamp,
-            oauth_signature_method: oauth_signature_method,
-            oauth_version: oauth_version,
-            consumerSecret: consumerSecret,
-            tokenSecret: tokenSecret,
-            encodedSignature: oauthSignature.generate(method, url, params, consumerSecret, tokenSecret),
-            isArray: false
-        },
-      }
-    });
-  });
 */
